@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* TIMELESS V2 — GLOBAL STYLE (Tailwind v4) */
+
+html, body { height: 100%; }
+body { background: #000; color: #fff; }
+
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .t-card{
+    @apply rounded-2xl border border-white/10 bg-white/5;
+  }
+
+  .t-btn{
+    @apply inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-sm text-white/85 transition;
+  }
+  .t-btn:hover{
+    @apply bg-white/15 text-white;
+  }
+
+  .t-btn-primary{
+    @apply inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/15 px-4 py-2 text-sm text-white transition;
+  }
+  .t-btn-primary:hover{
+    @apply bg-white/20;
+  }
+
+  .t-pill{
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70;
+  }
+
+  .t-kicker{
+    @apply text-xs text-white/55;
+    letter-spacing: 0.28em;
+  }
+
+  .t-h1{
+    @apply text-5xl font-semibold;
+  }
+  .t-h2{
+    @apply text-3xl font-semibold;
+  }
+}
+
+@keyframes floaty{
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.floaty{
+  animation: floaty 6s ease-in-out infinite;
+}
+html {
+  scroll-behavior: smooth;
+}

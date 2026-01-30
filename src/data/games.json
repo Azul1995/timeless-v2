@@ -1,0 +1,29 @@
+{
+  "activeDay": "viernes",
+  "days": {
+    "viernes": {
+      "label": "Viernes",
+      "note": "Partidos programados para hoy.",
+      "matches": [
+        { "left": "RedLight", "right": "Tyrants", "format": "BO1" },
+        { "left": "Titans Of The Rift", "right": "Troll World E-sport", "format": "BO1" },
+        { "left": "Banana Freedom", "right": "5AM", "format": "BO1" },
+        { "left": "Dracarys DRCS", "right": "XDiveos", "format": "BO1" },
+        { "left": "Pussys Destroyers", "right": "Night Guardians", "format": "BO1" },
+        { "left": "Los AFK'S", "right": "T6", "format": "BO1" },
+        { "left": "Loyalty4Ever", "right": "Viruz Crew", "format": "BO1" },
+        { "left": "Arcanos del Vacio", "right": "VnzlaSinLuz", "format": "BO1" }
+      ]
+    },
+    "sabado": {
+      "label": "Sábado",
+      "note": "Se define según los resultados del viernes.",
+      "matches": []
+    },
+    "domingo": {
+      "label": "Domingo",
+      "note": "Se define según los resultados del sábado.",
+      "matches": []
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  { "team": "Tyrants", "pts": 9, "tkda": 6.8 },
+  { "team": "Titans Of The Rift", "pts": 9, "tkda": 6.8 },
+  { "team": "Troll World E-sport", "pts": 9, "tkda": 5.8 },
+
+  { "team": "RedLight", "pts": 7, "tkda": 6.8 },
+
+  { "team": "Banana Freedom", "pts": 6, "tkda": 6.8 },
+  { "team": "5AM", "pts": 6, "tkda": 6.8 },
+  { "team": "Dracarys DRCS", "pts": 6, "tkda": 5.13 },
+  { "team": "XDiveos", "pts": 6, "tkda": 4.32 },
+
+  { "team": "Pussy's Destroyers", "pts": 3, "tkda": 6.8 },
+  { "team": "Night Guardians", "pts": 3, "tkda": 4.49 },
+  { "team": "Los AFK's", "pts": 3, "tkda": 4.31 },
+  { "team": "T6", "pts": 3, "tkda": 2.35 },
+  { "team": "Loyalty4ever", "pts": 3, "tkda": 2.26 },
+  { "team": "Viruz Crew", "pts": 3, "tkda": 2.06 },
+  { "team": "Arcanos Del Vacio", "pts": 3, "tkda": 2.05 },
+
+  { "team": "VnzlaSinLuz", "pts": 0, "tkda": 2.99 }
+]
