@@ -76,7 +76,7 @@ export default function Teams() {
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   <Badge>PTS: {pts}</Badge>
-                  <Badge>TKDA: {tkda.toFixed(2)}</Badge>
+<Badge>TKDA: {t.tkda === null ? "—" : Number(t.tkda).toFixed(2)}</Badge>
                   <Badge>Roster: pendiente</Badge>
                 </div>
 

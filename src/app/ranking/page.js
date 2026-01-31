@@ -57,7 +57,7 @@ export default function RankingPage() {
 
                 {/* TKDA */}
                 <div className="text-right text-white/70">
-                  {Number(team.tkda).toFixed(2)}
+                {team.tkda === null ? "—" : Number(team.tkda).toFixed(2)}
                 </div>
               </div>
             </div>

@@ -1,28 +1,23 @@
 {
-  "activeDay": "viernes",
+  "activeDay": "sabado",
   "days": {
     "viernes": {
       "label": "Viernes",
-      "note": "Partidos programados para hoy.",
-      "matches": [
-        { "left": "RedLight", "right": "Tyrants", "format": "BO1" },
-        { "left": "Titans Of The Rift", "right": "Troll World E-sport", "format": "BO1" },
-        { "left": "Banana Freedom", "right": "5AM", "format": "BO1" },
-        { "left": "Dracarys DRCS", "right": "XDiveos", "format": "BO1" },
-        { "left": "Pussys Destroyers", "right": "Night Guardians", "format": "BO1" },
-        { "left": "Los AFK'S", "right": "T6", "format": "BO1" },
-        { "left": "Loyalty4Ever", "right": "Viruz Crew", "format": "BO1" },
-        { "left": "Arcanos del Vacio", "right": "VnzlaSinLuz", "format": "BO1" }
-      ]
+      "matches": []
     },
     "sabado": {
       "label": "Sábado",
-      "note": "Se define según los resultados del viernes.",
-      "matches": []
+      "matches": [
+        { "left": "Tyrants", "right": "Troll World E-Sport", "format": "BO1" },
+        { "left": "Banana Freedom", "right": "Dracarys DRCS", "format": "BO1" },
+        { "left": "Pussy’s Destroyers", "right": "Los AFK’s", "format": "BO1" },
+        { "left": "VnzlaSinLuz", "right": "RedLight", "format": "BO1" },
+        { "left": "Loyalty4Ever", "right": "T6", "format": "BO1" },
+        { "left": "Night Guardians", "right": "Viruz Crew", "format": "BO3" }
+      ]
     },
     "domingo": {
       "label": "Domingo",
-      "note": "Se define según los resultados del sábado.",
       "matches": []
     }
   }

@@ -1,22 +1,17 @@
 [
-  { "team": "Tyrants", "pts": 9, "tkda": 6.8 },
-  { "team": "Titans Of The Rift", "pts": 9, "tkda": 6.8 },
-  { "team": "Troll World E-sport", "pts": 9, "tkda": 5.8 },
-
-  { "team": "RedLight", "pts": 7, "tkda": 6.8 },
-
-  { "team": "Banana Freedom", "pts": 6, "tkda": 6.8 },
-  { "team": "5AM", "pts": 6, "tkda": 6.8 },
-  { "team": "Dracarys DRCS", "pts": 6, "tkda": 5.13 },
-  { "team": "XDiveos", "pts": 6, "tkda": 4.32 },
-
-  { "team": "Pussy's Destroyers", "pts": 3, "tkda": 6.8 },
-  { "team": "Night Guardians", "pts": 3, "tkda": 4.49 },
-  { "team": "Los AFK's", "pts": 3, "tkda": 4.31 },
-  { "team": "T6", "pts": 3, "tkda": 2.35 },
-  { "team": "Loyalty4ever", "pts": 3, "tkda": 2.26 },
-  { "team": "Viruz Crew", "pts": 3, "tkda": 2.06 },
-  { "team": "Arcanos Del Vacio", "pts": 3, "tkda": 2.05 },
-
-  { "team": "VnzlaSinLuz", "pts": 0, "tkda": 2.99 }
+  { "team": "Tyrants", "pts": 12, "tkda": 5.69 },
+  { "team": "Troll World E-sport", "pts": 12, "tkda": null },
+  { "team": "Banana Freedom", "pts": 9, "tkda": null },
+  { "team": "Dracarys DRCS", "pts": 9, "tkda": null },
+  { "team": "Titans Of The Rift", "pts": 8, "tkda": null },
+  { "team": "Pussy's Destroyers", "pts": 6, "tkda": 6.8 },
+  { "team": "Los AFK'S", "pts": 6, "tkda": 6.8 },
+  { "team": "VnzlaSinLuz", "pts": 6, "tkda": 4.67 },
+  { "team": "RedLight", "pts": 6, "tkda": 2.52 },
+  { "team": "Loyalty4ever", "pts": 6, "tkda": null },
+  { "team": "5AM", "pts": 5, "tkda": null },
+  { "team": "XDiveos", "pts": 5, "tkda": null },
+  { "team": "Viruz Crew", "pts": 2, "tkda": null },
+  { "team": "T6", "pts": 2, "tkda": 1.27 },
+  { "team": "Night Guardians", "pts": 2, "tkda": 0.62 }
 ]
