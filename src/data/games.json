@@ -1,5 +1,5 @@
 {
-  "activeDay": "sabado",
+  "activeDay": "domingo",
   "days": {
     "viernes": {
       "label": "Viernes",
@@ -18,7 +18,15 @@
     },
     "domingo": {
       "label": "Domingo",
-      "matches": []
+      "matches": [
+        { "left": "Troll World E-sport", "right": "Banana Freedom", "format": "BO1" },
+        { "left": "Tyrants", "right": "Pussy’s Destroyers", "format": "BO1" },
+        { "left": "Loyalty4ever", "right": "Dracarys DRCS", "format": "BO1" },
+        { "left": "Titans of the Rift", "right": "VnzlaSinLuz", "format": "BO1" },
+        { "left": "Los AFK’s", "right": "RedLight", "format": "BO1" },
+        { "left": "Xdiveos", "right": "5AM", "format": "BO1" },
+        { "left": "Night Guardians", "right": "T6", "format": "BO1" }
+      ]
     }
   }
 }
