@@ -1,8 +1,8 @@
 [
   { "team": "Banana Freedom", "pts": 15, "tkda": 6.23 },
   { "team": "Troll World E-sport", "pts": 14, "tkda": 1.50 },
+  { "team": "Titans of the Rift", "pts": 12, "tkda": 6.80 },
   { "team": "Pussy’s Destroyers", "pts": 12, "tkda": null },
-  { "team": "Titans of the Rift", "pts": 11, "tkda": 6.80 },
   { "team": "Dracarys DRCS", "pts": 11, "tkda": null },
   { "team": "Tyrants", "pts": 10, "tkda": null },
   { "team": "RedLight", "pts": 8, "tkda": 6.36 },
