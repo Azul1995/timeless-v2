@@ -1,104 +1,66 @@
+// src/app/teams/page.js
+import Image from "next/image";
 import ranking from "@/data/ranking.json";
+import { getTeamLogo } from "@/lib/teamlogos";
 
-function Badge({ children }) {
-  return <span className="t-pill">{children}</span>;
-}
-
-export default function Teams() {
-  const sorted = [...ranking].sort((a, b) => b.pts - a.pts || b.tkda - a.tkda);
+export default function TeamsPage() {
+  // ordena por pts/tkda como ranking para que sea consistente
+  const teams = [...ranking].sort((a, b) => {
+    const ptsDiff = (b.pts ?? 0) - (a.pts ?? 0);
+    if (ptsDiff !== 0) return ptsDiff;
+    const aTk = a.tkda ?? -Infinity;
+    const bTk = b.tkda ?? -Infinity;
+    return bTk - aTk;
+  });
 
   return (
     <main className="min-h-screen">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="t-kicker">LIGA TIMELESS</div>
+        <h1 className="t-h2 mt-2">Equipos</h1>
 
-        <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h1 className="t-h2">Teams</h1>
-            <p className="mt-2 max-w-2xl text-white/70">
-              Lista oficial de equipos en la liga. Aquí se publicarán rosters y perfiles
-              cuando estén confirmados.
-            </p>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              <Badge>Orden oficial</Badge>
-              <Badge>Actualización simple</Badge>
-              <Badge>Perfiles próximamente</Badge>
-            </div>
-          </div>
-
-          {/* Search (visual only por ahora, sin lógica para evitar “client component”) */}
-          <div className="t-card p-4 md:min-w-[320px]">
-            <div className="t-kicker">BÚSQUEDA</div>
-            <div className="mt-2 text-sm text-white/60">
-              Próximo paso: búsqueda por nombre de equipo.
-            </div>
-          </div>
-        </div>
-
-        {/* GRID */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {sorted.map((t, idx) => {
-            const isTop3 = idx < 3;
-            const pts = Number(t.pts) || 0;
-            const tkda = Number(t.tkda) || 0;
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {teams.map((t) => {
+            const logo = getTeamLogo(t.team);
 
             return (
-              <div
-                key={t.team}
-                className={`t-card p-7 ${isTop3 ? "bg-white/[0.06]" : ""}`}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-4 min-w-0">
-                    <div className="h-12 w-12 rounded-2xl border border-white/10 bg-white/5" />
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2">
-                        <div className="truncate text-lg font-semibold">{t.team}</div>
+              <div key={t.team} className="t-card p-5 relative overflow-hidden">
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    opacity: 0.12,
+                    background:
+                      "linear-gradient(90deg, rgba(140,90,255,0.55), rgba(180,60,120,0.35), rgba(60,140,255,0.40))",
+                  }}
+                />
+                <div className="relative flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-2xl bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center">
+                    {logo ? (
+                      <Image
+                        src={logo}
+                        alt={`${t.team} logo`}
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 object-cover"
+                      />
+                    ) : (
+                      <div className="h-12 w-12 bg-white/5" />
+                    )}
+                  </div>
 
-                        {idx === 0 && (
-                          <span className="rounded-md border border-white/15 bg-white/10 px-2 py-[2px] text-[10px] tracking-wide text-white/80">
-                            LEADER
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="mt-1 text-xs text-white/55">
-                        Official Team · Timeless League
-                      </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold truncate">{t.team}</div>
+                    <div className="text-xs text-white/50">
+                      PTS: {Number(t.pts ?? 0)} · TKDA:{" "}
+                      {t.tkda === null || t.tkda === undefined
+                        ? "—"
+                        : Number(t.tkda).toFixed(2)}
                     </div>
                   </div>
-
-                  <div className="text-right">
-                    <div className="text-xs text-white/55">Rank</div>
-                    <div className="text-2xl font-semibold">{idx + 1}</div>
-                  </div>
-                </div>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <Badge>PTS: {pts}</Badge>
-<Badge>TKDA: {t.tkda === null ? "—" : Number(t.tkda).toFixed(2)}</Badge>
-                  <Badge>Roster: pendiente</Badge>
-                </div>
-
-                <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
-                  Perfil del equipo disponible próximamente: rosters confirmados, capitanes y datos oficiales.
-                </div>
-
-                <div className="mt-6 flex gap-3">
-                  <a className="t-btn" href="/ranking">
-                    Ver en ranking
-                  </a>
-                  <a className="t-btn-primary" href="/contact">
-                    Entrar a la comunidad
-                  </a>
                 </div>
               </div>
             );
           })}
-        </div>
-
-        <div className="mt-10 text-xs text-white/45">
-          Nota: Los rosters se publicarán únicamente cuando estén confirmados por la organización.
         </div>
       </div>
     </main>
